@@ -1,12 +1,12 @@
-
 import './App.css';
-import HomePage from "./Pages/HomePage"
+import Root from './Routes/Root';
+
 
 function App() {
   return (
-    <div >
-          <HomePage/>
-    </div>
+      <Root />
+      
+    
   );
 }
 
