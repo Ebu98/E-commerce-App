@@ -39,14 +39,14 @@ class App extends React.Component {
       <div>
         <Header />
         <Routes>
-          <Route  path="/" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route
             exact
-            path="/signin"
+            path="/signin" 
             render={() =>
               this.props.currentUser ? (
-                <Navigate to="/" />
+                <Navigate replace to="/" />
               ) : (
                 <SignupAndSigninPage />
               )
