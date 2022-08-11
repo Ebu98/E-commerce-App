@@ -1,8 +1,8 @@
 import HomePage from "../Pages/HomePage";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import ShopPage from "../Pages/Shop/ShopPage";
 import Header from "../Components/header/Header";
-import SignupAndSigninPage from "../Pages/Sign-upAndSign-in Page/Sign-up And Sign-in-Page";
+// import SignupAndSigninPage from "../Pages/Sign-upAndSign-in Page/Sign-up And Sign-in-Page";
 import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
 import { connect } from "react-redux";
 import { setCurrentUser } from "../Components/redux/user/user.actions";
@@ -35,6 +35,7 @@ class App extends React.Component {
   }
 
   render() {
+    // const Navigate = useNavigate()
     return (
       <div>
         <Header />
@@ -44,13 +45,13 @@ class App extends React.Component {
           <Route
             exact
             path="/signin" 
-            render={() =>
-              this.props.currentUser ? (
-                <Navigate replace to="/" />
-              ) : (
-                <SignupAndSigninPage />
-              )
-            }
+            // render={() =>
+            //   this.props.currentUser ? (
+            //     <Redirect to="/signin" /> 
+            //   ) : (
+            //     <SignupAndSigninPage />
+            //   )
+            // }
           />
         </Routes>
       </div>
